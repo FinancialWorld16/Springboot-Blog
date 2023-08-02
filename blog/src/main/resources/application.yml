@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.h2.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create #후에는 update로 변경
     properties:
       hibernate:
   # show_sql: true
