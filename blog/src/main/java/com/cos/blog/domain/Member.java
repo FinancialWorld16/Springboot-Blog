@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@DynamicInsert //column default 들어가게 하려고 ㅇㅇ
+//@DynamicInsert //column default 들어가게 하려고 ㅇㅇ
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -33,8 +33,8 @@ public class Member {
     @Column(nullable = false, length=50)
     private String email;
 
-    @ColumnDefault(" 'member' ")
-    private String role;
+    @Enumerated(EnumType.STRING) //DB는 RoleType 이라는게 없다
+    private RoleType role;
 
     @CreationTimestamp //시간이 자동으로 입력 됨
     private Timestamp createDate;
