@@ -24,7 +24,7 @@ public class Member {
     @Column(name="member_id")
     private Long id;
 
-    @Column(nullable = false, length=30)
+    @Column(nullable = false, length=30, unique = true)
     private String memberName; //아이디
 
     @Column(nullable = false, length=100) //암호화할거기때문에 길이 넉넉히...
