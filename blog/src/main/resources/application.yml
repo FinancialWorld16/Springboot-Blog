@@ -1,4 +1,8 @@
 spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
   datasource:
     url: jdbc:h2:tcp://localhost/~/blogproject
     username: sa
