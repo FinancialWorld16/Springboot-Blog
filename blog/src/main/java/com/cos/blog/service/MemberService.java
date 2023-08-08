@@ -19,4 +19,8 @@ public class MemberService {
         memberRepository.save(member);
     }
 
+    /*@Transactional(readOnly = true) //select할 때 트래잭션 시작, 서비스 종료시에 트랜잭션 종료(정합성 유지)
+    public Member login(Member member) {
+        return memberRepository.findByMemberNameAndPassword(member.getMemberName(), member.getPassword());
+    }*/
 }
